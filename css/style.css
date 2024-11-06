@@ -1,0 +1,127 @@
+@font-face {
+    font-family: airport;
+    src: url(../font/Airport.ttf);
+}
+@font-face {
+    font-family: any;
+    src: url(../font/OKScU8ig.ttf);
+}
+body{
+    margin:0;
+    padding: 0;
+    background: linear-gradient(to right,#2fbee9de,white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+div{
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+}
+.header-text{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transform: rotate(-5deg);
+    text-shadow: 1px 1px 1px rgb(121, 111, 255), 2px 2px 3px rgb(1, 26, 255);   
+    font-family: airport;
+}
+.container{
+    flex-grow: 1;
+    display: flex;
+    margin-right: 0;
+}
+nav{
+    margin:0 30px;
+    position: relative;
+    z-index: 1000;
+}
+nav>ul{
+    list-style: none;
+    padding:0;
+    width: 200px;
+    margin: 0;
+}
+nav>ul li{
+    display: block;
+    font-family: any;
+    border: 2px solid white;
+    background: radial-gradient(#0aece1, #2a6ae0);
+    border-radius: 10px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 1px;
+}
+
+nav>ul  li div{
+    width: 90%;
+    text-align: center;
+}
+
+nav>ul  li div:hover{
+    cursor: pointer;
+    color: rgb(17, 5, 173);
+}
+
+.content{
+    box-shadow: 1px 5px 5px black;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px 5px 5px 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+footer{
+    height: 40px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .header-text{
+        padding: 30px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content {
+        text-align: center;
+        width: 100%;
+        padding: 10px 10px 10px 10px ;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
